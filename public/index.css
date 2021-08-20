@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'Gobold';
+  src: local('Gobold'), url('./fonts/Gobold.otf') format('opentype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Futura';
+
+  src: local('Futura'), url('./fonts/Futura.ttf') format('truetype');
+
+  font-weight: normal;
+}

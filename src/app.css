@@ -1,0 +1,214 @@
+/* @font-face {
+  font-family: 'Gobold';
+  src: local('Gobold'), url('/src/fonts/Gobold.otf'), format('opentype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Futura';
+  src: local('Futura'), url('/src/fonts/Futura.ttc'), format('truetype');
+  font-weight: normal;
+} */
+* {
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Futura';
+  text-decoration: none;
+  color: black;
+  text-align: justify;
+}
+
+:root {
+  --NavBarWidth: 250px;
+  --pageColor: magenta;
+}
+
+img {
+  display: block;
+}
+
+h2 {
+  color: var(--pageColor);
+}
+
+.App {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-size: 50%;
+}
+
+.CV {
+  position: relative;
+  top: 0;
+}
+
+.Page {
+  top: 0;
+  left: 0;
+  position: absolute;
+  justify-items: end;
+  width: 100%;
+  z-index: 4;
+  background-color: yellow;
+}
+
+.Page .pageTitle {
+  color: var(--pageColor);
+  font-size: 150px;
+  font-family: 'Gobold';
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.Page .pageImage {
+  height: 100%;
+  width: 100%;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  grid-row: 1 / 3;
+  z-index: -1;
+  background-image: url("/src/img/MAIRIE FRESNES.jpg");
+  background-image: url("/src/img/Motif 23.jpg");
+  background-attachment: fixed;
+}
+
+.Page .pageText {
+  position: relative;
+  font-size: 15px;
+  font-family: Futura;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  text-align: justify;
+  place-self: center;
+  width: 300px;
+}
+
+.Page .pageText h2 {
+  font-family: Futura;
+  color: var(--pageColor);
+}
+
+.content {
+  margin-left: auto;
+  width: calc(100% - var(--NavBarWidth));
+  font-family: Futura;
+}
+
+.ImageAndText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 50px;
+  padding: 5%;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  min-width: 0;
+}
+
+.ImageAndText img {
+  display: block;
+  max-height: 100%;
+}
+
+.ImageAndText .legende {
+  width: 20%;
+  min-width: 200px;
+  place-self: center;
+}
+
+.hero {
+  margin-left: auto;
+  right: 0;
+  height: 100vh;
+  width: calc(100% - var(--NavBarWidth));
+  display: -ms-grid;
+  display: grid;
+  z-index: 4;
+  -ms-grid-columns: 0.75fr 1fr;
+      grid-template-columns: 0.75fr 1fr;
+  -ms-grid-rows: min-content;
+      grid-template-rows: -webkit-min-content;
+      grid-template-rows: min-content;
+}
+
+.blank {
+  width: 100%;
+  height: 100vh;
+}
+
+.NavBar {
+  display: -ms-grid;
+  display: grid;
+  position: fixed;
+  z-index: 10;
+  width: var(--NavBarWidth);
+  height: 100vh;
+}
+
+.NavBar h1 {
+  font-size: 20px;
+}
+
+.navItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.NavItem {
+  margin: 8px 0;
+  padding-left: 10px;
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 20px;
+  text-indent: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.NavItem.active {
+  text-decoration: none;
+  color: var(--pageColor);
+}
+
+.my-node-enter {
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+}
+
+.my-node-enter-active {
+  -webkit-transform: translate(0%);
+          transform: translate(0%);
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+}
+
+.my-node-exit {
+  -webkit-transform: translate(0%);
+          transform: translate(0%);
+}
+
+.my-node-exit-active {
+  -webkit-transform: translate(-100%);
+          transform: translate(-100%);
+  -webkit-transition: -webkit-transform 200ms;
+  transition: -webkit-transform 200ms;
+  transition: transform 200ms;
+  transition: transform 200ms, -webkit-transform 200ms;
+}
+/*# sourceMappingURL=App.css.map */
