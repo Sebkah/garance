@@ -39,26 +39,32 @@ function page() {
       </div>
 
       <div className="content">
-        {/* <img src="./img/fresnes/forum.jpg" alt="" /> */}
+        {/* <img src="./img/fresnes/forum.jpg" alt="hello" /> */}
 
-        {/* <img src={process.env.PUBLIC_URL + '/forum.jpg'} alt="" /> */}
+        {
+          <img
+            src={process.env.REACT_APP_PUBLIC_URL + 'img/forum.jpg'}
+            alt=""
+          />
+        }
 
-        <ImageAndText
+        {/*  <ImageAndText
           title="fête de l'été"
           img={images['fetedelété.jpg'].default}
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et
           sem pharetra, varius orci eu, mattis massa. Donec non purus dictum,
           elementum tortor non, consectetur velit. Mauris eu ultrices nibh.
           Integer malesuada elementum gravida. "
-        />
-        <ImageAndText
+        /> */}
+
+        {/* <ImageAndText
           title="fête de l'été"
           img={images['fetedelété.jpg'].default}
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et
           sem pharetra, varius orci eu, mattis massa. Donec non purus dictum,
           elementum tortor non, consectetur velit. Mauris eu ultrices nibh.
           Integer malesuada elementum gravida. "
-        />
+        /> */}
       </div>
     </div>
   );
