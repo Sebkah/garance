@@ -1,0 +1,47 @@
+.NavBar {
+  display: grid;
+  position: fixed;
+
+  //opacity: 0.5;
+
+  //background: white;
+
+  //opacity: 0.5;
+
+  //background: white;
+
+  //flex-direction: column;
+
+  z-index: 10;
+
+  width: var(--NavBarWidth);
+  height: 100vh;
+
+  h1 {
+    font-size: 20px;
+  }
+}
+.navItems {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.NavItem {
+  margin: 8px 0;
+  padding-left: 10px;
+  width: 100%;
+  text-transform: uppercase;
+
+  //border: red 1px solid;
+
+  font-size: 20px;
+
+  text-indent: 0;
+  transition: 0.5s;
+
+  &.active {
+    text-decoration: none;
+    //text-indent: 50px;
+    color: var(--pageColor);
+  }
+}

@@ -1,0 +1,17 @@
+:root {
+  --NavBarWidth: 250px;
+  --pageColor: magenta;
+}
+
+h2 {
+  color: var(--pageColor);
+}
+
+.App {
+  position: relative;
+
+  height: 100vh;
+  width: 100%;
+
+  background-size: 50%;
+}

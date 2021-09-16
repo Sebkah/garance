@@ -2,6 +2,8 @@ import './app.css';
 import NavBar from './components/navbar/NavBar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import { motion, AnimatePresence } from 'framer-motion';
+
 import {
   TransitionGroup,
   CSSTransition,
@@ -9,45 +11,47 @@ import {
 } from 'react-transition-group';
 
 import CV from './components/pages/CV';
-import Page from './components/pages/Page';
+import Fresnes from './components/pages/Fresnes';
 import Theatre from './components/pages/Theatre';
 
 function App() {
   return (
-    <div className="App">
-      <Router>
-        <NavBar />
-        <Route
-          render={({ location }) => {
-            return (
-              <TransitionGroup>
-                <CSSTransition
-                  in={false}
-                  key={location.key}
-                  timeout={200}
-                  classNames="my-node"
-                >
-                  <Switch location={location}>
-                    <Route exact path="/cv" component={CV} />
+    <AnimatePresence>
+      <div className="App">
+        <Router>
+          <NavBar />
+          <Route
+            render={({ location }) => {
+              return (
+                <TransitionGroup>
+                  <CSSTransition
+                    in={false}
+                    key={location.key}
+                    timeout={200}
+                    classNames="my-node"
+                  >
+                    <Switch location={location}>
+                      <Route exact path="/cv" component={CV} />
 
-                    <Route
-                      exact
-                      path="/fresnes"
-                      render={(props) => <Page {...props} />}
-                    />
-                    <Route
-                      exact
-                      path="/theatre"
-                      render={(props) => <Theatre {...props} />}
-                    />
-                  </Switch>
-                </CSSTransition>
-              </TransitionGroup>
-            );
-          }}
-        />
-      </Router>
-    </div>
+                      <Route
+                        exact
+                        path="/fresnes"
+                        render={(props) => <Fresnes {...props} color="red" />}
+                      />
+                      <Route
+                        exact
+                        path="/theatre"
+                        render={(props) => <Theatre {...props} color="blue" />}
+                      />
+                    </Switch>
+                  </CSSTransition>
+                </TransitionGroup>
+              );
+            }}
+          />
+        </Router>
+      </div>
+    </AnimatePresence>
   );
 }
 

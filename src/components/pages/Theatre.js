@@ -1,21 +1,9 @@
 import React from 'react';
-import forum from '../img/fresnes/forum.jpg';
-import ImageAndText from './ImageAndText';
+import ImageAndText from '../content/ImageAndText';
 
-function Theatre() {
-  function importAll(r) {
-    let images = {};
-    r.keys().forEach((item, index) => {
-      images[item.replace('./', '')] = r(item);
-    });
-    return images;
-  }
-  const images = importAll(
-    require.context('../img/fresnes', false, /\.(png|jpe?g|svg)$/)
-  );
-
+function Theatre({ color }) {
   return (
-    <div className="Page">
+    <div className="Page" style={{ '--pageColor': color }}>
       <div className="hero">
         <div className="pageImage"></div>
 
@@ -35,8 +23,8 @@ function Theatre() {
         </div>
       </div>
 
-      <ImageAndText
-        img={images['forum.jpg'].default}
+      {/*   <ImageAndText
+        img=""
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et
           sem pharetra, varius orci eu, mattis massa. Donec non purus dictum,
           elementum tortor non, consectetur velit. Mauris eu ultrices nibh.
@@ -44,12 +32,12 @@ function Theatre() {
       />
       <ImageAndText
         title="fête de l'été"
-        img={images['fetedelété.jpg'].default}
+        img=""
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et
           sem pharetra, varius orci eu, mattis massa. Donec non purus dictum,
           elementum tortor non, consectetur velit. Mauris eu ultrices nibh.
           Integer malesuada elementum gravida. "
-      />
+      /> */}
     </div>
   );
 }

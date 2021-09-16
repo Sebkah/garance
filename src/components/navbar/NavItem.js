@@ -10,17 +10,11 @@ const NavItem = ({ url, title, color }) => {
     else return false;
   };
 
-  const changeColor = () => {
-    console.log(color);
-
-    setTimeout(() => root.style.setProperty('--pageColor', `${color}`), 100);
-  };
-
   return (
     <Link
+      style={{ '--pageColor': color }}
       className={!compareURL() ? 'NavItem' : 'NavItem active'}
       to={compareURL() ? '/' : url}
-      onClick={changeColor}
     >
       {title}
     </Link>

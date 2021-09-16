@@ -1,0 +1,62 @@
+.content {
+  //position: relative;
+  margin-left: auto;
+
+  display: flex;
+
+  //grid-template-columns: 1fr 1fr 1fr;
+  //flex-wrap: nowrap;
+  //justify-content: center;
+
+  width: calc(100% - var(--NavBarWidth));
+  max-height: 100vh;
+  //height: 100vh;
+
+  font-family: Futura;
+
+  //height: 2000px;
+
+  //border: pink 10px solid;
+}
+
+.ImageAndText {
+  display: flex;
+
+  justify-content: center;
+  gap: 50px;
+
+  padding: 5%;
+
+  width: 100%;
+
+  min-height: 0;
+  min-width: 0;
+
+  //border: violet 1px solid;
+
+  img {
+    display: block;
+
+    max-width: 50%;
+    height: auto;
+
+    max-height: 100%;
+
+    //min-width: 0;
+  }
+
+  .legende {
+    width: 20%;
+    min-width: 200px;
+    place-self: center;
+  }
+}
+
+.SingleImage {
+  height: 100vh;
+}
+
+.Text {
+  max-width: 15%;
+  margin: 0 auto;
+}
