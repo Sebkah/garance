@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/react/build/static/css/main.78e6f7a3.chunk.css",
-    "main.js": "/react/build/static/js/main.ac0ae598.chunk.js",
-    "main.js.map": "/react/build/static/js/main.ac0ae598.chunk.js.map",
-    "runtime-main.js": "/react/build/static/js/runtime-main.369a300b.js",
-    "runtime-main.js.map": "/react/build/static/js/runtime-main.369a300b.js.map",
-    "static/js/2.b230e78a.chunk.js": "/react/build/static/js/2.b230e78a.chunk.js",
-    "static/js/2.b230e78a.chunk.js.map": "/react/build/static/js/2.b230e78a.chunk.js.map",
-    "index.html": "/react/build/index.html",
-    "static/css/main.78e6f7a3.chunk.css.map": "/react/build/static/css/main.78e6f7a3.chunk.css.map",
-    "static/js/2.b230e78a.chunk.js.LICENSE.txt": "/react/build/static/js/2.b230e78a.chunk.js.LICENSE.txt",
-    "static/media/app.css": "/react/build/static/media/frise.35894618.jpg"
+    "main.css": "./static/css/main.2536d1aa.chunk.css",
+    "main.js": "./static/js/main.ac0ae598.chunk.js",
+    "main.js.map": "./static/js/main.ac0ae598.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.41dcb616.js",
+    "runtime-main.js.map": "./static/js/runtime-main.41dcb616.js.map",
+    "static/js/2.b230e78a.chunk.js": "./static/js/2.b230e78a.chunk.js",
+    "static/js/2.b230e78a.chunk.js.map": "./static/js/2.b230e78a.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.2536d1aa.chunk.css.map": "./static/css/main.2536d1aa.chunk.css.map",
+    "static/js/2.b230e78a.chunk.js.LICENSE.txt": "./static/js/2.b230e78a.chunk.js.LICENSE.txt",
+    "static/media/app.css": "./static/media/frise.35894618.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.369a300b.js",
+    "static/js/runtime-main.41dcb616.js",
     "static/js/2.b230e78a.chunk.js",
-    "static/css/main.78e6f7a3.chunk.css",
+    "static/css/main.2536d1aa.chunk.css",
     "static/js/main.ac0ae598.chunk.js"
   ]
 }
