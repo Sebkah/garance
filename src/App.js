@@ -10,6 +10,7 @@ import {
   Transition,
 } from 'react-transition-group';
 
+import Contact from './components/navbar/Contact';
 import CV from './components/pages/CV';
 import Fresnes from './components/pages/Fresnes';
 import Theatre from './components/pages/Theatre';
@@ -20,6 +21,7 @@ function App() {
       <div className="App">
         <Router>
           <NavBar />
+          <Contact />
           <Route
             render={({ location }) => {
               return (

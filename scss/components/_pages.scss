@@ -34,7 +34,8 @@
 
   //border: red;
 
-  background-color: yellow;
+  //background-color: yellow;
+  backdrop-filter: blur(20px);
   //background-color: white;
 }
 
@@ -50,6 +51,8 @@
 
   grid-template-columns: 0.75fr 1fr;
   grid-template-rows: min-content;
+
+  /* border: pink solid 1px; */
 }
 
 .pageImage {
@@ -60,7 +63,8 @@
 
   z-index: -1;
 
-  background-image: url('./img/motif/23.jpg');
+  background-image: url('./img/frise.jpg');
+  background-size: 20%;
 
   background-attachment: fixed;
 }
@@ -73,6 +77,7 @@
 
   text-align: right;
   text-transform: uppercase;
+  justify-self: end;
 }
 
 .pageText {

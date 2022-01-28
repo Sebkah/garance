@@ -6,6 +6,12 @@ import { motion } from 'framer-motion';
 
 function page({ color }) {
   console.log(color);
+  var folder;
+  if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+    folder = '';
+  } else {
+    folder = '/react/build';
+  }
   return (
     <div className="Page" style={{ '--pageColor': color }}>
       <div className="hero">
@@ -16,7 +22,7 @@ function page({ color }) {
           initial={{ x: -500 }}
           animate={{ x: 0 }}
           exit={{ y: -500 }}
-          transition={{ type: 'spring', stiffness: 90, duration: 0.1 }}
+          transition={{ /* type: 'spring', stiffness: 90, */ duration: 0.4 }}
         >
           Mairie de <br />
           Fresnes
@@ -48,7 +54,7 @@ function page({ color }) {
         <ImageAndText
           config={true}
           title="fête de l'été"
-          img="/img/forum.jpg"
+          img={folder + '/img/forum.jpg'}
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et
           sem pharetra, varius orci eu, mattis massa. Donec non purus dictum,
           elementum tortor non, consectetur velit. Mauris eu ultrices nibh.
@@ -57,7 +63,7 @@ function page({ color }) {
         <ImageAndText
           config={false}
           title="nop"
-          img="/img/fresnes/fetedelete.jpg"
+          img={folder + '/img/fresnes/fetedelete.jpg'}
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et
           sem pharetra, varius orci eu, mattis massa. Donec non purus dictum,
           elementum tortor non, consectetur velit. Mauris eu ultrices nibh.
@@ -68,7 +74,7 @@ function page({ color }) {
         <ImageAndText
           config={true}
           title="fête de l'été"
-          img="/img/forum.jpg"
+          img={folder + '/img/forum.jpg'}
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et
           sem pharetra, varius orci eu, mattis massa. Donec non purus dictum,
           elementum tortor non, consectetur velit. Mauris eu ultrices nibh.
@@ -76,7 +82,7 @@ function page({ color }) {
         />
       </div>
       <div className="content">
-        <Image img="/img/forum.jpg" />
+        <Image img={folder + '/img/forum.jpg'} />
         <Text
           title="fête de l'été"
           text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et
@@ -84,7 +90,7 @@ function page({ color }) {
           elementum tortor non, consectetur velit. Mauris eu ultrices nibh.
           Integer malesuada elementum gravida. "
         />
-        <Image img="/img/fresnes/frise.jpg" />
+        <Image img={folder + '/img/fresnes/frise.jpg'} />
       </div>
     </div>
   );
